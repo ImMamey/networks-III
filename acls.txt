@@ -5,21 +5,30 @@ access-list 100 permit ip 192.44.192.0 0.0.0.255 192.44.196.202 0.0.0.0
 access-list 100 permit udp any any eq 67
 access-list 100 permit udp any any eq 68
 access-list 100 deny ip 192.44.192.0 0.0.0.255 any
-
-
-
 ip access-group 100 in
 
-Router R3 ZG
+
+Router R3 ZG inbound fa 0/0
 access-list 100 permit ip 192.44.194.0 0.0.0.255 192.44.196.210 0.0.0.0
 access-list 100 permit ip 192.44.194.0 0.0.0.255 192.44.196.194 0.0.0.0
 access-list 100 permit udp any any eq 67
 access-list 100 permit udp any any eq 68
 access-list 100 deny ip 192.44.194.0 0.0.0.255 any
+ip access-group 100 in
 
-Router R2 PG2
+Router R2 PG2 inbound fa0/1
 access-list 100 permit ip 192.44.193.0 0.0.0.255 192.44.196.218 0.0.0.0
 access-list 100 permit ip 192.44.193.0 0.0.0.255 192.44.196.194 0.0.0.0
 access-list 100 permit udp any any eq 67
 access-list 100 permit udp any any eq 68
 access-list 100 deny ip 192.44.193.0 0.0.0.255 any
+ip access-group 100 in
+
+
+Router R2 B inbound fa0/0
+access-list 100 permit ip 192.44.194.0 0.0.0.255 192.44.196.226 0.0.0.0
+access-list 100 permit ip 192.44.194.0 0.0.0.255 192.44.196.194 0.0.0.0
+access-list 100 permit udp any any eq 67
+access-list 100 permit udp any any eq 68
+access-list 100 deny ip 192.44.193.0 0.0.0.255 any
+ip access-group 100 in
