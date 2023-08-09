@@ -20,6 +20,8 @@ This repository contains the code and `.pkt` of the Redes III project, subject o
 A network was developed using Cisco CLI commands with: vlsm, subnets, RIP/ospf protocols, frame relay, IP phones, etc.
 
 ## Documentation
+> **[IMPORTANT]**
+> The docs of this project are written in spanish. You'd need to [translate](https://translate.google.com/?sl=es&tl=en&op=translate&hl=en) the documentation
 
 To read the docs with the project specifications and requirements, please read the following [file](https://github.com/ImMamey/networks-III/wiki/Planteamento---requisitos-del-proyecto).
 
